@@ -9,11 +9,11 @@ import (
 	"strings"
 )
 
-func getLinesChannel(fileData io.ReadCloser) <-chan string {
+func getLinesChannel(stream io.ReadCloser) <-chan string {
 	out := make(chan string, 1)
 
 	go func() {
-		defer fileData.Close()
+		defer stream.Close()
 		defer close(out)
 
 		result := ""
@@ -23,7 +23,7 @@ func getLinesChannel(fileData io.ReadCloser) <-chan string {
 			data := make([]byte, 8)
 
 			// read a bunch of data in that slice
-			n, err := fileData.Read(data)
+			n, err := stream.Read(data)
 
 			if n == 0 {
 				break
