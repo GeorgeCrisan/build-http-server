@@ -41,8 +41,7 @@ func getLinesChannel(fileData io.ReadCloser) <-chan string {
 				result += string(data[:i])
 
 				if len(result) > 0 {
-					toPrint := strings.ReplaceAll(result, "\n", "")
-					out <- toPrint
+					out <- strings.ReplaceAll(result, "\n", "")
 
 				}
 				result = ""
