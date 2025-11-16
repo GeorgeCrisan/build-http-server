@@ -1,0 +1,11 @@
+Why You Don’t See OSI Layers 5 and 6 in Real Networking
+
+When people learn networking, they often encounter the seven-layer OSI model:
+Physical, Data Link, Network, Transport, Session, Presentation, Application.
+But when you examine how real Internet systems work, you quickly notice that Layers 5 (Session) and 6 (Presentation) seem to disappear. Why?
+
+OSI Model vs. Real-World Networking
+
+George
+
+done
